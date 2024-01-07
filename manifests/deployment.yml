@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: m 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: m
+  template:
+    metadata:
+      labels:
+        app: m 
+    spec:
+      containers:
+        - name: m 
+          image: mauazurepetstorecr.azurecr.io/m
+          ports:
+          - containerPort: 80
